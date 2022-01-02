@@ -1,0 +1,55 @@
+# some constants for this file
+DIV="-------------------------------\n"
+JTODO=""
+
+# Aliases for jrnl -----------------------------
+alias j='jrnl'
+alias jw='jrnl work'
+alias jv='jrnl -s -from today'
+alias jvw='jrnl work -s -from today'
+alias today='printf $DIV && rem && printf $DIV && jrnl -s -from today && printf $DIV && todo.sh -a lsp'
+alias todaywork='printf $DIV && rem && printf $DIV && jrnl work -s -from today && printf $DIV && todo.sh -a -d .todowork.cfg lsp'
+
+alias jt='jrnl $JTODO'
+alias jtld='jrnl $JTODO -contains "#DOING" --short'
+alias jtlr='jrnl $JTODO -contains "#READY" --short'
+alias jtlt='jrnl $JTODO -contains "#TODO" --short'
+alias jtat='jrnl $JTODO "#TODO ##"'
+alias jtar='jrnl $JTODO "#READY ##"'
+alias jtad='jrnl $JTODO "#DOING ##"'
+
+alias jtl='jtlt && jtlr && jtld'
+
+# Functions -----------------------------
+jthelp() 
+{
+     cat <<-EndHelp
+          Jrnl todo set in JRNLTODO environment variable: $JRNLTODO
+             todo list is set in JTODO variable in this file - setting: $JTODO
+
+          Jrnl recipe commands:
+          j    : jrnl
+          jw   : jrnl work ...
+          jv   : jrnl -s -from today
+          jvw  : jrnl work -s -from today
+          jt   : jrnl $JTODO
+
+          today | jt  : displays todo with priorities and jrnl entries from today
+          todaywork | btw   : as above but the work jrnl
+
+          Todo recipes:
+
+            ---listing---
+          jtl   : show #DOING #READY #TODO tasks
+          jtld  : show #DOING tasks
+          jtlr  : show #READY tasks
+          jtlt  : show #TODO tasks
+            ---adding---
+          jtat : add #TODO tasks
+          jtar : add #READY tasks
+          jtad : add #DOING tasks
+          
+EndHelp
+
+     print "---"
+}
