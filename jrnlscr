@@ -23,6 +23,7 @@ alias jtl='jtlt && jtlr && jtld'
 # Functions -----------------------------
 jthelp() 
 {
+     printf $DIV
      cat <<-EndHelp
           Jrnl todo set in JRNLTODO environment variable: $JRNLTODO
              todo list is set in JTODO variable in this file - setting: $JTODO
@@ -51,5 +52,5 @@ jthelp()
           
 EndHelp
 
-     print "---"
+     printf $DIV
 }
