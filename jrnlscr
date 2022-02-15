@@ -14,16 +14,20 @@ alias jt='jrnl $JTODO'
 alias jtld='jrnl $JTODO -contains "#DOING" --short'
 alias jtlr='jrnl $JTODO -contains "#READY" --short'
 alias jtlt='jrnl $JTODO -contains "#TODO" --short'
+alias jtlh='jrnl $JTODO -contains "#DELEGATED" --short'
+alias jtldone='jrnl $JTODO -contains "DONE" --short'
 alias jtat='jrnl $JTODO "#TODO ##"'
 alias jtar='jrnl $JTODO "#READY ##"'
 alias jtad='jrnl $JTODO "#DOING ##"'
-
-alias jtl='jtlt && jtlr && jtld'
+alias jtah='jrnl $JTODO "#DELEGATED ##"'
+alias jtcd='jtld | wc -l'
+alias jtct='jtlt | wc -l'
+alias jtl='jtlt && jtlr && jtlh && jtld'
 
 # Functions -----------------------------
 jthelp() 
 {
-     printf $DIV
+     printf "$DIV"
      cat <<-EndHelp
           Jrnl todo set in JRNLTODO environment variable: $JRNLTODO
              todo list is set in JTODO variable in this file - setting: $JTODO
@@ -36,19 +40,28 @@ jthelp()
           jt   : jrnl $JTODO
 
           today | jt  : displays todo with priorities and jrnl entries from today
-          todaywork | btw   : as above but the work jrnl
+          todaywork | jtw   : as above but the work jrnl
 
           Todo recipes:
 
             ---listing---
-          jtl   : show #DOING #READY #TODO tasks
+          jtl   : show #DOING #READY #DELEGATED #TODO tasks
           jtld  : show #DOING tasks
           jtlr  : show #READY tasks
           jtlt  : show #TODO tasks
+          jtlh  : show #DELEGATED tasks
+          jtldone : show #DONE tasks -- see recipe below
             ---adding---
           jtat : add #TODO tasks
           jtar : add #READY tasks
+          jtah : add #DELEGATED tasks
           jtad : add #DOING tasks
+            ---counting---
+          jtcd : count #DOING tasks
+          jtct : count #TODO tasks
+
+          Recipe: j -contains '#DONE' -to 7/1/21 --short | wc -l
+          OR: jtldone -to 7/1/21 | wc -l
           
 EndHelp
 
