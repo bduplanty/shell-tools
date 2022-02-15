@@ -24,7 +24,7 @@ alias jtcd='jtld | wc -l'
 alias jtct='jtlt | wc -l'
 alias jtl='jtlt && jtlr && jtlh && jtld'
 
-alias jtarchive='sed -i.bak 's/#DONE/--DONE/g' journal.md'
+alias jtarchive='sed -i.bak 's/#DONE/--DONE/g' '
 
 # Functions -----------------------------
 jthelp() 
@@ -65,7 +65,7 @@ jthelp()
           Recipe: j -contains '#DONE' -to 7/1/21 --short | wc -l
           OR: jtldone -to 7/1/21 | wc -l
 
-          jtarchive: be in the directory with the jounral.md file, changes #DOING to --DOING
+          jtarchive: add file to process and be in the directory with the  file, changes #DOING to --DOING
           
 EndHelp
 
