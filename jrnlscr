@@ -1,13 +1,13 @@
 # some constants for this file
 DIV="-------------------------------\n"
-JTODO=""
+JTODO="work"
 
 # Aliases for jrnl -----------------------------
 alias j='jrnl'
 alias jw='jrnl work'
 alias jv='jrnl -s -from today'
 alias jvw='jrnl work -s -from today'
-alias today='printf $DIV && rem && printf $DIV && jrnl -s -from today && printf $DIV && todo.sh -a lsp'
+alias today='printf "%b" "$DIV" && rem && printf "%b" "$DIV" && jrnl -s -from today && printf "%b" "$DIV" && todo.sh -a lsp'
 alias todaywork='printf $DIV && rem && printf $DIV && jrnl work -s -from today && printf $DIV && todo.sh -a -d .todowork.cfg lsp'
 
 alias jt='jrnl $JTODO'
