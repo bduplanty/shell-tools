@@ -4,6 +4,8 @@ My collection of shell tools.
 1. jrnl aliases and functions to assist with TODO lists in jrnl files - future post to explain my process
 2. bash aliases, fuctions, and set-up (color, prompt) for decent and consistent bash shell setup
 
+Note: zsh can use print and is preferred - bash only uses echo
+
 ## Notes
 - I use zsh in MacOS to develop
 - Will check in secured windows environment
@@ -15,7 +17,7 @@ export JRNLTODO="test"  # either blank for default jrnl or the name of the jrnl 
 if [ -f ~/shell-tools/jrnlscr ]; then
     source ~/shell-tools/jrnlscr
 else
-    print "404: ~/shell-tools/jrnlscr not found."
+    echo "404: ~/shell-tools/jrnlscr not found."
 fi
 ## replace ~/shell-tools/jrnlscr to the location of the include file [jrnscr]
 ```
@@ -25,6 +27,6 @@ fi
 if [ -f ~/shell-tools/bashscr ]; then
     source ~/shell-tools/bashscr
 else
-    print "404: ~/shell-tools/bashscr not found."
+    echo "404: ~/shell-tools/bashscr not found."
 fi
 ```
