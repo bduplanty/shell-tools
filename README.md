@@ -17,4 +17,11 @@ else
     print "404: ~/shell/jrnlscr not found."
 fi
 ## replace ~/shell/jrnlscr to the location of the include file [jrnscr]
+
+# bashsrc - bash set-up and aliases
+if [ -f ~/shell/bashscr ]; then
+    source ~/shell/bashscr
+else
+    print "404: ~/shell/bashscr not found."
+fi
 ```
