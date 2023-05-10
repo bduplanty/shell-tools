@@ -20,6 +20,7 @@ alias reload_bash="exec bash"
 
 #todo
 export TODOTXT_PATH='/usr/local/bin/todo.txt-cli'
+export PATH="$PATH:$TODOTXT_PATH"
 source $TODOTXT_PATH/todo_completion
 
 alias todo="$TODOTXT_PATH/todo.sh -a"
