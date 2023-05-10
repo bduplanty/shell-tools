@@ -19,11 +19,10 @@ alias edit="micro"
 alias reload_bash="exec bash"
 
 #todo
-alias todo="/usr/bin/todo-txt -a"
-alias t="/usr/bin/todo-txt -a"
-alias thome="/usr/bin/todo-txt -a -d ~/.todohome.cfg"
-alias todo.sh="/usr/bin/todo-txt -a"
+export TODOTXT_PATH='/usr/local/bin/todo.txt-cli'
+source $TODOTXT_PATH/todo_completion
+
+alias todo="$TODOTXT_PATH/todo.sh -a"
+alias t="$TODOTXT_PATH/todo.sh -a"
 export TODOTXT_DEFAULT_ACTION=ls
 export TODOTXT_SORT_COMMAND='env LC_COLLATE=C sort -k 2,2 -k 1,1n'
-export PATH="$PATH:/usr/bin"
-
