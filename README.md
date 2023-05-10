@@ -12,19 +12,19 @@ My collection of shell tools.
 - include in .zshrc or .bashrc
 ```
 export JRNLTODO="test"  # either blank for default jrnl or the name of the jrnl file (set-up in jrnl config) you would like
-if [ -f ~/shell/jrnlscr ]; then
-    source ~/shell/jrnlscr
+if [ -f ~/shell-tools/jrnlscr ]; then
+    source ~/shell-tools/jrnlscr
 else
-    print "404: ~/shell/jrnlscr not found."
+    print "404: ~/shell-tools/jrnlscr not found."
 fi
-## replace ~/shell/jrnlscr to the location of the include file [jrnscr]
+## replace ~/shell-tools/jrnlscr to the location of the include file [jrnscr]
 ```
 # bashsrc - bash set-up and aliases
 - include in .bashrc
 ```
-if [ -f ~/shell/bashscr ]; then
-    source ~/shell/bashscr
+if [ -f ~/shell-tools/bashscr ]; then
+    source ~/shell-tools/bashscr
 else
-    print "404: ~/shell/bashscr not found."
+    print "404: ~/shell-tools/bashscr not found."
 fi
 ```
