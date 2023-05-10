@@ -2,6 +2,7 @@
 
 My collection of shell tools.
 1. jrnl aliases and functions to assist with TODO lists in jrnl files - future post to explain my process
+2. bash aliases, fuctions, and set-up (color, prompt) for decent and consistent bash shell setup
 
 ## Notes
 - I use zsh in MacOS to develop
