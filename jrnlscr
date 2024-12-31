@@ -1,6 +1,6 @@
 # some constants for this file
 DIV="-------------------------------\n"
-JTODO="work"
+JTODO=""
 
 # Aliases for jrnl -----------------------------
 alias j='jrnl'
