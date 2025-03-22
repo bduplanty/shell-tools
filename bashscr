@@ -18,6 +18,7 @@ export EDITOR="/usr/bin/micro"
 alias edit="micro"
 alias reload_bash="exec bash"
 alias plugplay="sudo chmod a+rw /dev/ttyUSB*"
+alias updatetime="sudo ntpdate pool.ntp.org"
 
 #todo
 export TODOTXT_PATH='/usr/local/bin/todo.txt-cli'
