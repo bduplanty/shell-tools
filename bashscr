@@ -17,6 +17,9 @@ export EDITOR="/usr/bin/micro"
 
 alias edit="micro"
 alias reload_bash="exec bash"
+alias update_setup="cd && cd shell-tools && git pull && exec bash"
+
+## for unbuntu HAM computer
 alias plugplay="sudo chmod a+rw /dev/ttyUSB*"
 alias updatetime="sudo ntpdate pool.ntp.org"
 
